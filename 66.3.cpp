@@ -8,7 +8,7 @@ using namespace std;
   cout << a << " " << b << " " << c << endl;
 }
 
-bool pitagoras(int a, int b, int c) {
+bool Triangle(int a, int b, int c) {
   return ((a * a) + (b * b) == (c * c) || 
           (a * a) + (c * c) == (b * b) || 
           (c * c) + (b * b) == (a * a));
@@ -20,8 +20,8 @@ bool pitagoras(int a, int b, int c) {
     in >> tab[i][0] >> tab[i][1] >> tab[i][2];
   }
   for (int i = 1; i < SIZE; i++) {
-    if (pitagoras(tab[i - 1][0], tab[i - 1][1], tab[i - 1][2]) &&
-        pitagoras(tab[i][0], tab[i][1], tab[i][2])) {
+    if (Triangle(tab[i - 1][0], tab[i - 1][1], tab[i - 1][2]) &&
+        Triangle(tab[i][0], tab[i][1], tab[i][2])) {
           
       display(tab[i - 1][0], tab[i - 1][1], tab[i - 1][2]);
       display(tab[i][0], tab[i][1], tab[i][2]);
